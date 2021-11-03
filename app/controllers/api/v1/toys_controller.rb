@@ -1,2 +1,7 @@
-class ToysController < ApplicationController
+class Api::V1::ToysController < ApplicationController
+
+
+
+
+    
 end
