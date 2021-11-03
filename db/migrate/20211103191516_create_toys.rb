@@ -3,7 +3,6 @@ class CreateToys < ActiveRecord::Migration[6.1]
     create_table :toys do |t|
       t.string :name
       t.string :description
-      t.string :category
       t.string :image_url
 
       t.timestamps

@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_11_03_191910) do
     t.string "title"
     t.string "content"
     t.integer "rating"
+    t.integer "toy_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -23,7 +24,6 @@ ActiveRecord::Schema.define(version: 2021_11_03_191910) do
   create_table "toys", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "category"
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
