@@ -24,6 +24,10 @@ class Api::V1::ToysController < ApplicationController
         render json: @toy
     end
 
+    def destroy
+        @toy = Toy.find(find(params[:id]))
+        @toy.destroy
+    end
     private
 
     def toy_params
