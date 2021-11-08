@@ -14,12 +14,14 @@ class Api::V1::ToysController < ApplicationController
         if @toy.save
             render json: @Toy
         else
-            render json: {error: "OH NO😦! There was an error when you tried creating the toy. Try again 😁!"}
+            render json: {error: "OH NO😦! There was an error when you tried creating the toy. Please try again 😁!"}
         end
     end
 
+    # These params are looking for /api/v1/toys/1 <- that toy id
     def show
-
+        @toy = Toy.find(params[:id])
+        render json: @toy
     end
 
     private
