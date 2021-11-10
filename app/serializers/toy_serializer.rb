@@ -1,3 +1,4 @@
 class ToySerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :description, :image_url
+  has_many :reviews
 end

@@ -5,7 +5,7 @@ class Api::V1::ReviewsController < ApplicationController
 
     # show the reviews that are associated with the toy
     def index 
-        @reviews = @toy.reviews
+        @reviews = Review.all
         render json: @reviews
     end
 
