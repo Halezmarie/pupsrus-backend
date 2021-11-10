@@ -1,4 +1,5 @@
 class Api::V1::ReviewsController < ApplicationController
+    # data manipulation in controllers 
     # it will run w/e method we tell it to before anything else 
     before_action :set_review, only: [:show, :destroy]
 

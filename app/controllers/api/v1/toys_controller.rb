@@ -1,6 +1,7 @@
 class Api::V1::ToysController < ApplicationController
+    # data manipulation
+   
     # api/v1/toys/1/reviews 
-
     # when I make the fetch request and come into this action I will want to be getting all of the toys. 
     # I will then send these back to the frontend with JSON. 
     def index 
@@ -33,10 +34,5 @@ class Api::V1::ToysController < ApplicationController
 
     def toy_params
         params.require(:toy).permit(:name, :description, :image_url, :toy_id)
-end
-
-
-
-
-    
+    end
 end

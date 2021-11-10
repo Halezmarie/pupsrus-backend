@@ -7,4 +7,5 @@ Rails.application.routes.draw do
       end
     end
   end
+end
         # nested the reviews with toys, so we can ONLY access it through toys such as api/v1/toys/1/reviews 
