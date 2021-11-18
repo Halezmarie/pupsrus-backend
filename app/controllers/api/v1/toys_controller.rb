@@ -26,7 +26,7 @@ class Api::V1::ToysController < ApplicationController
     end
 
     def destroy
-        @toy = Toy.find(find(params[:id]))
+        @toy = Toy.find(params[:id])
         @toy.destroy
     end
     

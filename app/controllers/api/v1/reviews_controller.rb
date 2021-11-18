@@ -28,9 +28,13 @@ class Api::V1::ReviewsController < ApplicationController
     end
 
     def destroy
-        @review.destroy
-        toy = Toy.find_by_id(params[:tea_id])
-    end
+        review = Review.find_by_id(params[:id])
+        toy = Toy.find_by_id(params[:toy_id])
+        if @review.destroy
+            render json: toy
+        else render json: {error: "OH NO😦! There was an error when you tried deleting the review. Please try again 😁!"}
+        end
+      end
 
     private
 
@@ -39,6 +43,6 @@ class Api::V1::ReviewsController < ApplicationController
       end
 
     def review_params
-        params.require(:review).permit(:title, :content, :rating, :toy_id)
+        params.require(:review).permit(:id, :title, :content, :rating, :toy_id)
     end
 end
