@@ -11,9 +11,9 @@ class Api::V1::ToysController < ApplicationController
 
     # Use new to pass through the instance through the toy params
     def create
-        @toy = Toy.new
+        @toy = Toy.new(toy_params)
         if @toy.save
-            render json: @Toy
+            render json: @toy
         else
             render json: {error: "OH NO😦! There was an error when you tried creating the toy. Please try again 😁!"}
         end
@@ -33,6 +33,6 @@ class Api::V1::ToysController < ApplicationController
     private
 
     def toy_params
-        params.require(:toy).permit(:name, :description, :image_url, :toy_id)
+        params.require(:toy).permit(:name, :description, :image_url)
     end
 end
