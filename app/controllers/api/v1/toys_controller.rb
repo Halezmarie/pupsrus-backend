@@ -5,7 +5,7 @@ class Api::V1::ToysController < ApplicationController
     # when I make the fetch request and come into this action I will want to be getting all of the toys. 
     # I will then send these back to the frontend with JSON. 
     def index 
-        @toys = Toy.all
+        @toys = Toy.all.sort_by {|obj| obj.name}
         render json: @toys
     end
 
