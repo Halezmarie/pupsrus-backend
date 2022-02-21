@@ -27,8 +27,11 @@ class Api::V1::ToysController < ApplicationController
     end
 
     def destroy
-        @toy.destroy
-        render json: @toy.id
+        if @toy.destroy
+         render json: @toy.id
+        else
+            render json: {error: "OH NO😦! There was an error when you tried deleting the toy. Please try again 😁!"}
+    end
       end
     
     private
