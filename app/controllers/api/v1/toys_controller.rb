@@ -1,4 +1,5 @@
 class Api::V1::ToysController < ApplicationController
+    before_action :set_toy, only: [:show, :update, :destroy]
     # data manipulation
    
     # api/v1/toys/1/reviews 
@@ -31,6 +32,10 @@ class Api::V1::ToysController < ApplicationController
       end
     
     private
+
+    def set_toy
+        @toy = Toy.find(params[:id])
+      end
 
     def toy_params
         params.require(:toy).permit(:name, :description, :image_url)
