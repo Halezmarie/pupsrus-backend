@@ -12,5 +12,6 @@ kongball = Toy.create(name: "Small Kong Ball", description: "A small kong ball t
 
 lizardtoy = Toy.create(name: "Lizard Toy", description: "A small lizard toy that dogs love to squeak", image_url: "https://i5.walmartimages.com/asr/fb0be74c-0749-4993-a29d-c53bbd8f6657.0d01659e383724cf8462a1ba5969011d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF")
 
+orangeball = Toy.create(name: "Orange  Ball", description: "An orange ball that dogs can play with ", image_url: "https://img.chewy.com/is/image/catalog/152801_Main._AC_SL400_V1549654699_.jpg")
 
 Review.create(title: "My pup loves this!", content: "Our baby Sparkles loves this teddy bear, I am so happy she is gentle with it!", rating: "10", toy_id: 1)
