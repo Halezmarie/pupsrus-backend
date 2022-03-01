@@ -1,6 +1,4 @@
 class Api::V1::ReviewsController < ApplicationController
-    # data manipulation in controllers 
-    # it will run w/e method we tell it to before anything else 
     before_action :set_review, only: [:show, :destroy]
   
 
@@ -11,7 +9,6 @@ class Api::V1::ReviewsController < ApplicationController
     end
 
 
-    # setting toy to the id and setting the review to be associated with the toy correctly through the params
     def create
         @toy = Toy.find_by_id(params[:toy_id])
         @review = @toy.reviews.new(review_params)
