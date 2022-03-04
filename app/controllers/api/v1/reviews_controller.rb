@@ -1,7 +1,6 @@
 class Api::V1::ReviewsController < ApplicationController
     before_action :set_review, only: [:show, :destroy]
   
-    # show the reviews that are associated with the toy
     def index 
         @reviews = Review.all
         render json: @reviews
@@ -17,12 +16,10 @@ class Api::V1::ReviewsController < ApplicationController
     end
  
     def show
-        # @review = Review.find(params[:id])
         render json: @review
     end
 
     def destroy
-        # review = Review.find_by_id(params[:id]) 
         toy = Toy.find_by_id(params[:toy_id])
         if @review.destroy
             render json: toy
