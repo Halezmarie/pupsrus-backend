@@ -1,12 +1,10 @@
 class Api::V1::ToysController < ApplicationController
     before_action :set_toy, only: [:show, :update, :destroy]
-    # data manipulation
    
     def index 
         @toys = Toy.all.sort_by {|obj| obj.name}
         render json: @toys
     end
-
 
     def create
         @toy = Toy.new(toy_params)
@@ -16,7 +14,6 @@ class Api::V1::ToysController < ApplicationController
             render json: {error: "OH NO😦! There was an error when you tried creating the toy. Please try again 😁!"}
         end
     end
-
  
     def show
         @toy = Toy.find(params[:id])
