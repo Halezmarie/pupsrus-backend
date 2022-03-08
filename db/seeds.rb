@@ -14,4 +14,6 @@ lizardtoy = Toy.create(name: "Lizard Toy", description: "A small lizard toy that
 
 orangeball = Toy.create(name: "Orange  Ball", description: "An orange ball that dogs can play with ", image_url: "https://img.chewy.com/is/image/catalog/152801_Main._AC_SL400_V1549654699_.jpg")
 
+wobblewaggiggle = Toy.create(name: "Giggle Toy", description: "A ball that giggles ", image_url: "https://m.media-amazon.com/images/I/81GGDYhfSCL._AC_SX466_.jpg")
+
 Review.create(title: "My pup loves this!", content: "Our baby Sparkles loves this teddy bear, I am so happy she is gentle with it!", rating: "10", toy_id: 1)
