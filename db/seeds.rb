@@ -19,4 +19,9 @@ wobblewaggiggle = Toy.create(name: "Giggle Toy", description: "A ball that giggl
 cactustoy = Toy.create(name: "Cactus Toy", description: "Cactus toy for dogs to play with", image_url: "https://m.media-amazon.com/images/I/71VmbDpjhQL._AC_SX466_.jpg")
 
 Review.create(title: "My pup loves this!", content: "Our baby Sparkles loves this teddy bear, I am so happy she is gentle with it!", rating: "10", toy_id: 1)
+
 Review.create(title: "My pup hates this!", content: "My dog tore this up! I hate this. ", rating: "1", toy_id: 2)
+
+Review.create(title: "My pup likes this I guess!", content: "It's okay", rating: "4", toy_id: 3)
+
+Review.create(title: "This isn't good", content: "My dogs don't like this at all, they won't play with it", rating: "2", toy_id: 4)
