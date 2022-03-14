@@ -25,3 +25,7 @@ Review.create(title: "My pup hates this!", content: "My dog tore this up! I hate
 Review.create(title: "My pup likes this I guess!", content: "It's okay", rating: "4", toy_id: 3)
 
 Review.create(title: "This isn't good", content: "My dogs don't like this at all, they won't play with it", rating: "2", toy_id: 4)
+
+Review.create(title: "It's okay", content: "I wouldn't buy it again", rating: "0", toy_id: 5)
+
+Review.create(title: "I love this toy", content: "It keeps my dog busy for days", rating: "10", toy_id: 6)
