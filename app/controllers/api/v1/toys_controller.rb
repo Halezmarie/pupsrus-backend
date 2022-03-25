@@ -1,5 +1,5 @@
 class Api::V1::ToysController < ApplicationController
-    before_action :set_toy, only: [:show, :update, :destroy]
+    before_action :set_toy, only: [:show, :destroy]
    
     def index 
         @toys = Toy.all.sort_by {|obj| obj.name}
@@ -16,7 +16,6 @@ class Api::V1::ToysController < ApplicationController
     end
  
     def show
-        @toy = Toy.find(params[:id])
         render json: @toy
     end
 
