@@ -30,7 +30,7 @@ class Api::V1::ToysController < ApplicationController
     private
 
     def set_toy
-        @toy = Toy.find(params[:id])
+        @toy = Toy.find_by(params[:toy_id])
       end
 
     def toy_params
