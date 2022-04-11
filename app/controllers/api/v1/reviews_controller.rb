@@ -11,7 +11,8 @@ class Api::V1::ReviewsController < ApplicationController
         @review = @toy.reviews.new(review_params)
         if @review.save
             render json: @toy
-        else render json: {error: "OH NO😦! There was an error when you tried creating the review. Please try again 😁!"}
+        else 
+            render json: {error: "OH NO😦! There was an error when you tried creating the review. Please try again 😁!"}
         end
     end
  
