@@ -1,8 +1,6 @@
+# manual seeding
 
-# cuddler = Category.create(name: "Cuddler")
-# playful = Category.create(name: "Playful")
-# destroyer = Category.create(name: "Destroyer")
-
+#TODO: planning on pulling from an API
 
 teddybear = Toy.create(name: "Brown Teddy Bear", description: "A cute stuffed animal that looks like a teddy bear", image_url: "https://m.media-amazon.com/images/I/61DWaMHr8HL._AC_SX425_.jpg")
 
